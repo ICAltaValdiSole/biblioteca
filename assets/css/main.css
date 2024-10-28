@@ -29,28 +29,28 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-table {
+#libriTable {
     width: 100%; /* Larghezza della tabella */
-    border-collapse: collapse; /* Rimuove gli spazi tra i bordi delle celle */
+    border-collapse: collapse; /* Unisce i bordi delle celle */
     margin-top: 20px; /* Spazio sopra la tabella */
 }
 
-th, td {
+#libriTable th, #libriTable td {
     padding: 10px; /* Spaziatura interna */
     text-align: left; /* Allineamento del testo */
     border: 1px solid #ddd; /* Bordo delle celle */
 }
 
-th {
+#libriTable th {
     background-color: #4CAF50; /* Colore di sfondo per l'intestazione */
     color: white; /* Colore del testo dell'intestazione */
 }
 
-tr:nth-child(even) {
+#libriTable tr:nth-child(even) {
     background-color: #f2f2f2; /* Colore di sfondo per le righe pari */
 }
 
-tr:hover {
+#libriTable tr:hover {
     background-color: #ddd; /* Colore di sfondo al passaggio del mouse */
 }
 
