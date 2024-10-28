@@ -3412,6 +3412,9 @@ input, select, textarea {
 			transition-delay: 0.75s;
 			pointer-events: none;
 			background-image: url("../../images/sfocato.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
 			content: '';
 			display: block;
 			height: 100%;
