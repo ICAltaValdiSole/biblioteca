@@ -3411,7 +3411,7 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			pointer-events: none;
-			background-image: url("images/sfocato.jpg");
+			background-image: url("../../images/sfocato.jpg");
 			content: '';
 			display: block;
 			height: 100%;
