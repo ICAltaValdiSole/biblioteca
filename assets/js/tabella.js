@@ -17,15 +17,21 @@ $(function() {
     });
 
       // Mostra la tabella e filtra i risultati solo dopo aver premuto invio
-    $('#searchInput').on('keypress', function(e) {
-        if (e.which === 13) {  // Codice del tasto 'Enter'
-            var value = $(this).val().toLowerCase();
-            $('#libriTable').show(); // Mostra la tabella dei libri
-            $('#libriTable tbody tr').filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-            });
-        }
-    });
+    $('#searchInput').on('keyup', function(e) {
+    var value = $(this).val().toLowerCase();
+    
+    if (e.key === 'Enter' && value.length > 0) { // Controlla che sia stato premuto "Enter" con un valore inserito
+        $('#libriTable').show(); // Mostra la lista dei libri
+        $('html, body').animate({
+            scrollTop: $("#libriTable").offset().top - $header.height() - 20
+        }, 600);
+    } else {
+        $('#libriTable tbody tr').filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    }
+});
+
 
     caricaLibri();
 });
