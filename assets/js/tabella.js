@@ -16,11 +16,15 @@ $(function() {
         }
     });
 
-    $('#searchInput').on('keyup', function() {
-        var value = $(this).val().toLowerCase();
-        $('#libriTable tbody tr').filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
+      // Mostra la tabella e filtra i risultati solo dopo aver premuto invio
+    $('#searchInput').on('keypress', function(e) {
+        if (e.which === 13) {  // Codice del tasto 'Enter'
+            var value = $(this).val().toLowerCase();
+            $('#libriTable').show(); // Mostra la tabella dei libri
+            $('#libriTable tbody tr').filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            });
+        }
     });
 
     caricaLibri();
