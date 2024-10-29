@@ -111,10 +111,11 @@
 
 	// Scrolly.
 		$('.scrolly').scrolly({
-			offset: function() {
-				return $header.height() - 2;
-			}
+   			 offset: function() {
+       			 return $header.height() + 200; // Sposta leggermente sotto la barra di ricerca
+    		}
 		});
+
 
 	// Tiles.
 		var $tiles = $('.tiles > article');
