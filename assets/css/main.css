@@ -28,6 +28,46 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+
+.InputContainer input[type="text"] {
+    width: 100%;
+    padding: 12px 20px 12px 40px; /* Aggiungi spazio per l'icona */
+    font-size: 1.1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Bordo leggero e semi-trasparente */
+    border-radius: 25px; /* Bordi arrotondati */
+    background-color: rgba(255, 255, 255, 0.1); /* Sfondo semi-trasparente */
+    color: #ffffff;
+    outline: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.InputContainer input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Colore del placeholder */
+    opacity: 1; /* Garantisce che il colore sia visibile su tutti i browser */
+}
+
+.InputContainer input[type="text"]:focus {
+    background-color: rgba(255, 255, 255, 0.2); /* Cambia colore al focus */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+}
+
+.InputContainer {
+    position: relative; /* Per posizionare l'icona all'interno del campo di testo */
+}
+
+.InputContainer::before {
+    content: "\f002"; /* Codice icona FontAwesome per la lente di ingrandimento */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 15px; /* Posizione dell'icona all'interno del campo */
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5); /* Colore icona */
+    font-size: 1rem;
+}
+
+
 #libriTable .id-column {
         display: none;
     }
