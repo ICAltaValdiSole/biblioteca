@@ -2504,6 +2504,7 @@ input, select, textarea {
 		}
 
 		table thead {
+			border-top: solid 10px rgb(42 47 74);
 			border-bottom: solid 2px rgba(212, 212, 255, 0.1);
 		}
 
